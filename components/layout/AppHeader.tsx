@@ -43,7 +43,7 @@ export const AppHeader: React.FC = () => {
   };
 
   return (
-    <header className="h-14 border-b border-border bg-card/40 backdrop-blur-md px-4 flex items-center justify-between sticky top-8 z-30 select-none">
+    <header className="h-14 border-b border-border bg-card/40 backdrop-blur-md px-4 flex items-center justify-between sticky top-0 z-30 select-none">
       {/* Left: Brand Title & Active Exam Switcher */}
       <div className="flex items-center space-x-3.5">
         <Link href="/dashboard" className="flex items-center space-x-2.5 group shrink-0">

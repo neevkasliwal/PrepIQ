@@ -2,7 +2,6 @@
 
 import React, { useEffect } from "react";
 import { usePathname } from "next/navigation";
-import { DemoBanner } from "./DemoBanner";
 import { AppSidebar } from "./AppSidebar";
 import { AppHeader } from "./AppHeader";
 import { useAppStore } from "@/store/useAppStore";
@@ -37,7 +36,6 @@ export const AppShell: React.FC<{ children: React.ReactNode }> = ({ children }) 
   if (isAuthOrOnboarding) {
     return (
       <div className="min-h-screen flex flex-col bg-background">
-        <DemoBanner />
         <main className="flex-1 flex items-center justify-center p-4">{children}</main>
       </div>
     );
@@ -45,9 +43,8 @@ export const AppShell: React.FC<{ children: React.ReactNode }> = ({ children }) 
 
   // Standard Dashboard Layout
   return (
-    <div className="min-h-screen flex flex-col bg-background">
-      <DemoBanner />
-      <div className="flex-1 flex h-[calc(100vh-2rem)] overflow-hidden">
+    <div className="h-screen flex flex-col bg-background overflow-hidden">
+      <div className="flex-1 flex h-full overflow-hidden">
         <AppSidebar />
         <div className="flex-1 flex flex-col min-w-0 overflow-hidden">
           <AppHeader />
